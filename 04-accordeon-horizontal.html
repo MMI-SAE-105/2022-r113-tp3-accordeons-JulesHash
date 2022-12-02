@@ -1,12 +1,48 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Accordéon horizontal</title>
-  </head>
-  <body>
-    <h1>Accordéon horizontal</h1>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <title>Accordéon </title>
+</head>
+
+<body>
+  <h1>Accordéon </h1>
+  <ul id="accordeon" x-data="{isOpen:0}">
+    <li :class="{actif:isOpen === 0,}">
+      <figure @click="isOpen = 0">
+        <img src="assets/testttt.jpg" alt="test" width="102">
+        <figcaption>
+          <h3>Lorem, ipsum dolor.</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus adipisci molestias veritatis iusto
+            atque, dolor impedit. Ipsam mollitia, necessitatibus facere, earum, corporis voluptatibus cumque a aperiam
+            deserunt libero officiis? Est.</p>
+        </figcaption>
+      </figure>
+    </li>
+    <li :class="{actif:isOpen === 1,}">
+      <figure @click="isOpen = 1">
+        <img src="assets/testttt.jpg" alt="" width="102">
+        <figcaption>
+          <h3>Accusantium, ifjdoho non.</h3>
+          <p>Iusto quidem expedita dshhdinhoifjhfdhl</p>
+        </figcaption>
+      </figure>
+    </li>
+    <li :class="{actif:isOpen === 2,}">
+      <figure @click="isOpen = 2">
+        <img src="assets/testttt.jpg" alt="" width="102">
+        <figcaption>
+          <h3>Sint, consequatur cumque.</h3>
+          <p>Similique, hic. Nostrum dtnhohisdoihns.</p>
+        </figcaption>
+      </figure>
+    </li>
+  </ul>
+</body>
+
 </html>
